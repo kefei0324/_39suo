@@ -1,20 +1,15 @@
 package org.feona.dao;
 
-import java.util.List;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.ResultMap;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 import org.feona.pojo.Account;
-import org.feona.pojo.AccountExample;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface AccountMapper {
-    int countByExample(AccountExample example);
-
-    int deleteByExample(AccountExample example);
-
     @Delete({
         "delete from account",
         "where id = #{id,jdbcType=INTEGER}"
@@ -33,8 +28,6 @@ public interface AccountMapper {
 
     int insertSelective(Account record);
 
-    List<Account> selectByExample(AccountExample example);
-
     @Select({
         "select",
         "id, name, pwd, status, createtime, updatetime, deviceid",
@@ -43,10 +36,6 @@ public interface AccountMapper {
     })
     @ResultMap("BaseResultMap")
     Account selectByPrimaryKey(Integer id);
-
-    int updateByExampleSelective(@Param("record") Account record, @Param("example") AccountExample example);
-
-    int updateByExample(@Param("record") Account record, @Param("example") AccountExample example);
 
     int updateByPrimaryKeySelective(Account record);
 

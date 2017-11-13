@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.feona.dao.MsgmodelMapper" >
+  <resultMap id="BaseResultMap" type="org.feona.pojo.Msgmodel" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="data1" property="data1" jdbcType="VARCHAR" />
+    <result column="data2" property="data2" jdbcType="VARCHAR" />
+    <result column="data3" property="data3" jdbcType="VARCHAR" />
+    <result column="data4" property="data4" jdbcType="VARCHAR" />
+    <result column="data5" property="data5" jdbcType="VARCHAR" />
+    <result column="data6" property="data6" jdbcType="VARCHAR" />
+    <result column="data7" property="data7" jdbcType="VARCHAR" />
+    <result column="data8" property="data8" jdbcType="VARCHAR" />
+    <result column="data9" property="data9" jdbcType="VARCHAR" />
+    <result column="data10" property="data10" jdbcType="VARCHAR" />
+    <result column="data11" property="data11" jdbcType="VARCHAR" />
+    <result column="data1f" property="data1f" jdbcType="TINYINT" />
+    <result column="data2f" property="data2f" jdbcType="TINYINT" />
+    <result column="data3f" property="data3f" jdbcType="TINYINT" />
+    <result column="data4f" property="data4f" jdbcType="TINYINT" />
+    <result column="data5f" property="data5f" jdbcType="TINYINT" />
+    <result column="data6f" property="data6f" jdbcType="TINYINT" />
+    <result column="data7f" property="data7f" jdbcType="TINYINT" />
+    <result column="data8f" property="data8f" jdbcType="TINYINT" />
+    <result column="data9f" property="data9f" jdbcType="TINYINT" />
+    <result column="data10f" property="data10f" jdbcType="TINYINT" />
+    <result column="data11f" property="data11f" jdbcType="TINYINT" />
+    <result column="data1sc" property="data1sc" jdbcType="REAL" />
+    <result column="data2sc" property="data2sc" jdbcType="REAL" />
+    <result column="data3sc" property="data3sc" jdbcType="REAL" />
+    <result column="data4sc" property="data4sc" jdbcType="REAL" />
+    <result column="data5sc" property="data5sc" jdbcType="REAL" />
+    <result column="data6sc" property="data6sc" jdbcType="REAL" />
+    <result column="data7sc" property="data7sc" jdbcType="REAL" />
+    <result column="data8sc" property="data8sc" jdbcType="REAL" />
+    <result column="data9sc" property="data9sc" jdbcType="REAL" />
+    <result column="data10sc" property="data10sc" jdbcType="REAL" />
+    <result column="data11sc" property="data11sc" jdbcType="REAL" />
+    <result column="total" property="total" jdbcType="REAL" />
+    <result column="data1s" property="data1s" jdbcType="VARCHAR" />
+    <result column="data2s" property="data2s" jdbcType="VARCHAR" />
+    <result column="data3s" property="data3s" jdbcType="VARCHAR" />
+    <result column="data4s" property="data4s" jdbcType="VARCHAR" />
+    <result column="data5s" property="data5s" jdbcType="VARCHAR" />
+    <result column="data6s" property="data6s" jdbcType="VARCHAR" />
+    <result column="data7s" property="data7s" jdbcType="VARCHAR" />
+    <result column="data8s" property="data8s" jdbcType="VARCHAR" />
+    <result column="data9s" property="data9s" jdbcType="VARCHAR" />
+    <result column="data10s" property="data10s" jdbcType="VARCHAR" />
+    <result column="data11s" property="data11s" jdbcType="VARCHAR" />
+    <result column="msgid" property="msgid" jdbcType="INTEGER" />
+    <result column="createtime" property="createtime" jdbcType="TIMESTAMP" />
+    <result column="updatetime" property="updatetime" jdbcType="TIMESTAMP" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="devicename" property="devicename" jdbcType="VARCHAR" />
+    <result column="deviceid" property="deviceid" jdbcType="INTEGER" />
+    <result column="accountid" property="accountid" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, data1, data2, data3, data4, data5, data6, data7, data8, data9, data10, data11, 
+    data1f, data2f, data3f, data4f, data5f, data6f, data7f, data8f, data9f, data10f, 
+    data11f, data1sc, data2sc, data3sc, data4sc, data5sc, data6sc, data7sc, data8sc, 
+    data9sc, data10sc, data11sc, total, data1s, data2s, data3s, data4s, data5s, data6s, 
+    data7s, data8s, data9s, data10s, data11s, msgid, createtime, updatetime, status, 
+    devicename, deviceid, accountid
+  </sql>
+  <insert id="insertSelective" parameterType="org.feona.pojo.Msgmodel" >
+    insert into msgmodel
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="data1 != null" >
+        data1,
+      </if>
+      <if test="data2 != null" >
+        data2,
+      </if>
+      <if test="data3 != null" >
+        data3,
+      </if>
+      <if test="data4 != null" >
+        data4,
+      </if>
+      <if test="data5 != null" >
+        data5,
+      </if>
+      <if test="data6 != null" >
+        data6,
+      </if>
+      <if test="data7 != null" >
+        data7,
+      </if>
+      <if test="data8 != null" >
+        data8,
+      </if>
+      <if test="data9 != null" >
+        data9,
+      </if>
+      <if test="data10 != null" >
+        data10,
+      </if>
+      <if test="data11 != null" >
+        data11,
+      </if>
+      <if test="data1f != null" >
+        data1f,
+      </if>
+      <if test="data2f != null" >
+        data2f,
+      </if>
+      <if test="data3f != null" >
+        data3f,
+      </if>
+      <if test="data4f != null" >
+        data4f,
+      </if>
+      <if test="data5f != null" >
+        data5f,
+      </if>
+      <if test="data6f != null" >
+        data6f,
+      </if>
+      <if test="data7f != null" >
+        data7f,
+      </if>
+      <if test="data8f != null" >
+        data8f,
+      </if>
+      <if test="data9f != null" >
+        data9f,
+      </if>
+      <if test="data10f != null" >
+        data10f,
+      </if>
+      <if test="data11f != null" >
+        data11f,
+      </if>
+      <if test="data1sc != null" >
+        data1sc,
+      </if>
+      <if test="data2sc != null" >
+        data2sc,
+      </if>
+      <if test="data3sc != null" >
+        data3sc,
+      </if>
+      <if test="data4sc != null" >
+        data4sc,
+      </if>
+      <if test="data5sc != null" >
+        data5sc,
+      </if>
+      <if test="data6sc != null" >
+        data6sc,
+      </if>
+      <if test="data7sc != null" >
+        data7sc,
+      </if>
+      <if test="data8sc != null" >
+        data8sc,
+      </if>
+      <if test="data9sc != null" >
+        data9sc,
+      </if>
+      <if test="data10sc != null" >
+        data10sc,
+      </if>
+      <if test="data11sc != null" >
+        data11sc,
+      </if>
+      <if test="total != null" >
+        total,
+      </if>
+      <if test="data1s != null" >
+        data1s,
+      </if>
+      <if test="data2s != null" >
+        data2s,
+      </if>
+      <if test="data3s != null" >
+        data3s,
+      </if>
+      <if test="data4s != null" >
+        data4s,
+      </if>
+      <if test="data5s != null" >
+        data5s,
+      </if>
+      <if test="data6s != null" >
+        data6s,
+      </if>
+      <if test="data7s != null" >
+        data7s,
+      </if>
+      <if test="data8s != null" >
+        data8s,
+      </if>
+      <if test="data9s != null" >
+        data9s,
+      </if>
+      <if test="data10s != null" >
+        data10s,
+      </if>
+      <if test="data11s != null" >
+        data11s,
+      </if>
+      <if test="msgid != null" >
+        msgid,
+      </if>
+      <if test="createtime != null" >
+        createtime,
+      </if>
+      <if test="updatetime != null" >
+        updatetime,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="devicename != null" >
+        devicename,
+      </if>
+      <if test="deviceid != null" >
+        deviceid,
+      </if>
+      <if test="accountid != null" >
+        accountid,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="data1 != null" >
+        #{data1,jdbcType=VARCHAR},
+      </if>
+      <if test="data2 != null" >
+        #{data2,jdbcType=VARCHAR},
+      </if>
+      <if test="data3 != null" >
+        #{data3,jdbcType=VARCHAR},
+      </if>
+      <if test="data4 != null" >
+        #{data4,jdbcType=VARCHAR},
+      </if>
+      <if test="data5 != null" >
+        #{data5,jdbcType=VARCHAR},
+      </if>
+      <if test="data6 != null" >
+        #{data6,jdbcType=VARCHAR},
+      </if>
+      <if test="data7 != null" >
+        #{data7,jdbcType=VARCHAR},
+      </if>
+      <if test="data8 != null" >
+        #{data8,jdbcType=VARCHAR},
+      </if>
+      <if test="data9 != null" >
+        #{data9,jdbcType=VARCHAR},
+      </if>
+      <if test="data10 != null" >
+        #{data10,jdbcType=VARCHAR},
+      </if>
+      <if test="data11 != null" >
+        #{data11,jdbcType=VARCHAR},
+      </if>
+      <if test="data1f != null" >
+        #{data1f,jdbcType=TINYINT},
+      </if>
+      <if test="data2f != null" >
+        #{data2f,jdbcType=TINYINT},
+      </if>
+      <if test="data3f != null" >
+        #{data3f,jdbcType=TINYINT},
+      </if>
+      <if test="data4f != null" >
+        #{data4f,jdbcType=TINYINT},
+      </if>
+      <if test="data5f != null" >
+        #{data5f,jdbcType=TINYINT},
+      </if>
+      <if test="data6f != null" >
+        #{data6f,jdbcType=TINYINT},
+      </if>
+      <if test="data7f != null" >
+        #{data7f,jdbcType=TINYINT},
+      </if>
+      <if test="data8f != null" >
+        #{data8f,jdbcType=TINYINT},
+      </if>
+      <if test="data9f != null" >
+        #{data9f,jdbcType=TINYINT},
+      </if>
+      <if test="data10f != null" >
+        #{data10f,jdbcType=TINYINT},
+      </if>
+      <if test="data11f != null" >
+        #{data11f,jdbcType=TINYINT},
+      </if>
+      <if test="data1sc != null" >
+        #{data1sc,jdbcType=REAL},
+      </if>
+      <if test="data2sc != null" >
+        #{data2sc,jdbcType=REAL},
+      </if>
+      <if test="data3sc != null" >
+        #{data3sc,jdbcType=REAL},
+      </if>
+      <if test="data4sc != null" >
+        #{data4sc,jdbcType=REAL},
+      </if>
+      <if test="data5sc != null" >
+        #{data5sc,jdbcType=REAL},
+      </if>
+      <if test="data6sc != null" >
+        #{data6sc,jdbcType=REAL},
+      </if>
+      <if test="data7sc != null" >
+        #{data7sc,jdbcType=REAL},
+      </if>
+      <if test="data8sc != null" >
+        #{data8sc,jdbcType=REAL},
+      </if>
+      <if test="data9sc != null" >
+        #{data9sc,jdbcType=REAL},
+      </if>
+      <if test="data10sc != null" >
+        #{data10sc,jdbcType=REAL},
+      </if>
+      <if test="data11sc != null" >
+        #{data11sc,jdbcType=REAL},
+      </if>
+      <if test="total != null" >
+        #{total,jdbcType=REAL},
+      </if>
+      <if test="data1s != null" >
+        #{data1s,jdbcType=VARCHAR},
+      </if>
+      <if test="data2s != null" >
+        #{data2s,jdbcType=VARCHAR},
+      </if>
+      <if test="data3s != null" >
+        #{data3s,jdbcType=VARCHAR},
+      </if>
+      <if test="data4s != null" >
+        #{data4s,jdbcType=VARCHAR},
+      </if>
+      <if test="data5s != null" >
+        #{data5s,jdbcType=VARCHAR},
+      </if>
+      <if test="data6s != null" >
+        #{data6s,jdbcType=VARCHAR},
+      </if>
+      <if test="data7s != null" >
+        #{data7s,jdbcType=VARCHAR},
+      </if>
+      <if test="data8s != null" >
+        #{data8s,jdbcType=VARCHAR},
+      </if>
+      <if test="data9s != null" >
+        #{data9s,jdbcType=VARCHAR},
+      </if>
+      <if test="data10s != null" >
+        #{data10s,jdbcType=VARCHAR},
+      </if>
+      <if test="data11s != null" >
+        #{data11s,jdbcType=VARCHAR},
+      </if>
+      <if test="msgid != null" >
+        #{msgid,jdbcType=INTEGER},
+      </if>
+      <if test="createtime != null" >
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null" >
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="devicename != null" >
+        #{devicename,jdbcType=VARCHAR},
+      </if>
+      <if test="deviceid != null" >
+        #{deviceid,jdbcType=INTEGER},
+      </if>
+      <if test="accountid != null" >
+        #{accountid,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.feona.pojo.Msgmodel" >
+    update msgmodel
+    <set >
+      <if test="data1 != null" >
+        data1 = #{data1,jdbcType=VARCHAR},
+      </if>
+      <if test="data2 != null" >
+        data2 = #{data2,jdbcType=VARCHAR},
+      </if>
+      <if test="data3 != null" >
+        data3 = #{data3,jdbcType=VARCHAR},
+      </if>
+      <if test="data4 != null" >
+        data4 = #{data4,jdbcType=VARCHAR},
+      </if>
+      <if test="data5 != null" >
+        data5 = #{data5,jdbcType=VARCHAR},
+      </if>
+      <if test="data6 != null" >
+        data6 = #{data6,jdbcType=VARCHAR},
+      </if>
+      <if test="data7 != null" >
+        data7 = #{data7,jdbcType=VARCHAR},
+      </if>
+      <if test="data8 != null" >
+        data8 = #{data8,jdbcType=VARCHAR},
+      </if>
+      <if test="data9 != null" >
+        data9 = #{data9,jdbcType=VARCHAR},
+      </if>
+      <if test="data10 != null" >
+        data10 = #{data10,jdbcType=VARCHAR},
+      </if>
+      <if test="data11 != null" >
+        data11 = #{data11,jdbcType=VARCHAR},
+      </if>
+      <if test="data1f != null" >
+        data1f = #{data1f,jdbcType=TINYINT},
+      </if>
+      <if test="data2f != null" >
+        data2f = #{data2f,jdbcType=TINYINT},
+      </if>
+      <if test="data3f != null" >
+        data3f = #{data3f,jdbcType=TINYINT},
+      </if>
+      <if test="data4f != null" >
+        data4f = #{data4f,jdbcType=TINYINT},
+      </if>
+      <if test="data5f != null" >
+        data5f = #{data5f,jdbcType=TINYINT},
+      </if>
+      <if test="data6f != null" >
+        data6f = #{data6f,jdbcType=TINYINT},
+      </if>
+      <if test="data7f != null" >
+        data7f = #{data7f,jdbcType=TINYINT},
+      </if>
+      <if test="data8f != null" >
+        data8f = #{data8f,jdbcType=TINYINT},
+      </if>
+      <if test="data9f != null" >
+        data9f = #{data9f,jdbcType=TINYINT},
+      </if>
+      <if test="data10f != null" >
+        data10f = #{data10f,jdbcType=TINYINT},
+      </if>
+      <if test="data11f != null" >
+        data11f = #{data11f,jdbcType=TINYINT},
+      </if>
+      <if test="data1sc != null" >
+        data1sc = #{data1sc,jdbcType=REAL},
+      </if>
+      <if test="data2sc != null" >
+        data2sc = #{data2sc,jdbcType=REAL},
+      </if>
+      <if test="data3sc != null" >
+        data3sc = #{data3sc,jdbcType=REAL},
+      </if>
+      <if test="data4sc != null" >
+        data4sc = #{data4sc,jdbcType=REAL},
+      </if>
+      <if test="data5sc != null" >
+        data5sc = #{data5sc,jdbcType=REAL},
+      </if>
+      <if test="data6sc != null" >
+        data6sc = #{data6sc,jdbcType=REAL},
+      </if>
+      <if test="data7sc != null" >
+        data7sc = #{data7sc,jdbcType=REAL},
+      </if>
+      <if test="data8sc != null" >
+        data8sc = #{data8sc,jdbcType=REAL},
+      </if>
+      <if test="data9sc != null" >
+        data9sc = #{data9sc,jdbcType=REAL},
+      </if>
+      <if test="data10sc != null" >
+        data10sc = #{data10sc,jdbcType=REAL},
+      </if>
+      <if test="data11sc != null" >
+        data11sc = #{data11sc,jdbcType=REAL},
+      </if>
+      <if test="total != null" >
+        total = #{total,jdbcType=REAL},
+      </if>
+      <if test="data1s != null" >
+        data1s = #{data1s,jdbcType=VARCHAR},
+      </if>
+      <if test="data2s != null" >
+        data2s = #{data2s,jdbcType=VARCHAR},
+      </if>
+      <if test="data3s != null" >
+        data3s = #{data3s,jdbcType=VARCHAR},
+      </if>
+      <if test="data4s != null" >
+        data4s = #{data4s,jdbcType=VARCHAR},
+      </if>
+      <if test="data5s != null" >
+        data5s = #{data5s,jdbcType=VARCHAR},
+      </if>
+      <if test="data6s != null" >
+        data6s = #{data6s,jdbcType=VARCHAR},
+      </if>
+      <if test="data7s != null" >
+        data7s = #{data7s,jdbcType=VARCHAR},
+      </if>
+      <if test="data8s != null" >
+        data8s = #{data8s,jdbcType=VARCHAR},
+      </if>
+      <if test="data9s != null" >
+        data9s = #{data9s,jdbcType=VARCHAR},
+      </if>
+      <if test="data10s != null" >
+        data10s = #{data10s,jdbcType=VARCHAR},
+      </if>
+      <if test="data11s != null" >
+        data11s = #{data11s,jdbcType=VARCHAR},
+      </if>
+      <if test="msgid != null" >
+        msgid = #{msgid,jdbcType=INTEGER},
+      </if>
+      <if test="createtime != null" >
+        createtime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null" >
+        updatetime = #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="devicename != null" >
+        devicename = #{devicename,jdbcType=VARCHAR},
+      </if>
+      <if test="deviceid != null" >
+        deviceid = #{deviceid,jdbcType=INTEGER},
+      </if>
+      <if test="accountid != null" >
+        accountid = #{accountid,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

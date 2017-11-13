@@ -1,20 +1,13 @@
 package org.feona.dao;
 
-import java.util.List;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.ResultMap;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 import org.feona.pojo.Device;
-import org.feona.pojo.DeviceExample;
 
 public interface DeviceMapper {
-    int countByExample(DeviceExample example);
-
-    int deleteByExample(DeviceExample example);
-
     @Delete({
         "delete from device",
         "where id = #{id,jdbcType=INTEGER}"
@@ -33,8 +26,6 @@ public interface DeviceMapper {
 
     int insertSelective(Device record);
 
-    List<Device> selectByExample(DeviceExample example);
-
     @Select({
         "select",
         "id, name, status, createtime, updatetime, remark",
@@ -43,10 +34,6 @@ public interface DeviceMapper {
     })
     @ResultMap("BaseResultMap")
     Device selectByPrimaryKey(Integer id);
-
-    int updateByExampleSelective(@Param("record") Device record, @Param("example") DeviceExample example);
-
-    int updateByExample(@Param("record") Device record, @Param("example") DeviceExample example);
 
     int updateByPrimaryKeySelective(Device record);
 

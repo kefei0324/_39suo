@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.feona.dao.MsgMapper" >
+  <resultMap id="BaseResultMap" type="org.feona.pojo.Msg" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="data1" property="data1" jdbcType="VARCHAR" />
+    <result column="data2" property="data2" jdbcType="VARCHAR" />
+    <result column="data3" property="data3" jdbcType="VARCHAR" />
+    <result column="data4" property="data4" jdbcType="VARCHAR" />
+    <result column="data5" property="data5" jdbcType="VARCHAR" />
+    <result column="data6" property="data6" jdbcType="VARCHAR" />
+    <result column="data7" property="data7" jdbcType="VARCHAR" />
+    <result column="data8" property="data8" jdbcType="VARCHAR" />
+    <result column="data9" property="data9" jdbcType="VARCHAR" />
+    <result column="data10" property="data10" jdbcType="VARCHAR" />
+    <result column="data11" property="data11" jdbcType="VARCHAR" />
+    <result column="createtime" property="createtime" jdbcType="TIMESTAMP" />
+    <result column="updatetime" property="updatetime" jdbcType="TIMESTAMP" />
+    <result column="deviceid" property="deviceid" jdbcType="INTEGER" />
+    <result column="accountid" property="accountid" jdbcType="INTEGER" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="devicename" property="devicename" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, data1, data2, data3, data4, data5, data6, data7, data8, data9, data10, data11, 
+    createtime, updatetime, deviceid, accountid, status, devicename
+  </sql>
+  <insert id="insertSelective" parameterType="org.feona.pojo.Msg" >
+    insert into msg
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="data1 != null" >
+        data1,
+      </if>
+      <if test="data2 != null" >
+        data2,
+      </if>
+      <if test="data3 != null" >
+        data3,
+      </if>
+      <if test="data4 != null" >
+        data4,
+      </if>
+      <if test="data5 != null" >
+        data5,
+      </if>
+      <if test="data6 != null" >
+        data6,
+      </if>
+      <if test="data7 != null" >
+        data7,
+      </if>
+      <if test="data8 != null" >
+        data8,
+      </if>
+      <if test="data9 != null" >
+        data9,
+      </if>
+      <if test="data10 != null" >
+        data10,
+      </if>
+      <if test="data11 != null" >
+        data11,
+      </if>
+      <if test="createtime != null" >
+        createtime,
+      </if>
+      <if test="updatetime != null" >
+        updatetime,
+      </if>
+      <if test="deviceid != null" >
+        deviceid,
+      </if>
+      <if test="accountid != null" >
+        accountid,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="devicename != null" >
+        devicename,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="data1 != null" >
+        #{data1,jdbcType=VARCHAR},
+      </if>
+      <if test="data2 != null" >
+        #{data2,jdbcType=VARCHAR},
+      </if>
+      <if test="data3 != null" >
+        #{data3,jdbcType=VARCHAR},
+      </if>
+      <if test="data4 != null" >
+        #{data4,jdbcType=VARCHAR},
+      </if>
+      <if test="data5 != null" >
+        #{data5,jdbcType=VARCHAR},
+      </if>
+      <if test="data6 != null" >
+        #{data6,jdbcType=VARCHAR},
+      </if>
+      <if test="data7 != null" >
+        #{data7,jdbcType=VARCHAR},
+      </if>
+      <if test="data8 != null" >
+        #{data8,jdbcType=VARCHAR},
+      </if>
+      <if test="data9 != null" >
+        #{data9,jdbcType=VARCHAR},
+      </if>
+      <if test="data10 != null" >
+        #{data10,jdbcType=VARCHAR},
+      </if>
+      <if test="data11 != null" >
+        #{data11,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null" >
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deviceid != null" >
+        #{deviceid,jdbcType=INTEGER},
+      </if>
+      <if test="accountid != null" >
+        #{accountid,jdbcType=INTEGER},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="devicename != null" >
+        #{devicename,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.feona.pojo.Msg" >
+    update msg
+    <set >
+      <if test="data1 != null" >
+        data1 = #{data1,jdbcType=VARCHAR},
+      </if>
+      <if test="data2 != null" >
+        data2 = #{data2,jdbcType=VARCHAR},
+      </if>
+      <if test="data3 != null" >
+        data3 = #{data3,jdbcType=VARCHAR},
+      </if>
+      <if test="data4 != null" >
+        data4 = #{data4,jdbcType=VARCHAR},
+      </if>
+      <if test="data5 != null" >
+        data5 = #{data5,jdbcType=VARCHAR},
+      </if>
+      <if test="data6 != null" >
+        data6 = #{data6,jdbcType=VARCHAR},
+      </if>
+      <if test="data7 != null" >
+        data7 = #{data7,jdbcType=VARCHAR},
+      </if>
+      <if test="data8 != null" >
+        data8 = #{data8,jdbcType=VARCHAR},
+      </if>
+      <if test="data9 != null" >
+        data9 = #{data9,jdbcType=VARCHAR},
+      </if>
+      <if test="data10 != null" >
+        data10 = #{data10,jdbcType=VARCHAR},
+      </if>
+      <if test="data11 != null" >
+        data11 = #{data11,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null" >
+        createtime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null" >
+        updatetime = #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deviceid != null" >
+        deviceid = #{deviceid,jdbcType=INTEGER},
+      </if>
+      <if test="accountid != null" >
+        accountid = #{accountid,jdbcType=INTEGER},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="devicename != null" >
+        devicename = #{devicename,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
